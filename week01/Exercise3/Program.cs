@@ -5,25 +5,30 @@ class Program
     static void Main(string[] args)
     {
         Random RandomNumberGenerator = new Random();
-        int magicNumber = RandomNumberGenerator.Next(1, 25);
+        int magicNumber = RandomNumberGenerator.Next(1, 11);
 
         Console.WriteLine("What's your guess? ");
         string input = Console.ReadLine();
         int userGuess = int.Parse(input);
 
-        if (userGuess < magicNumber)
+        do
         {
-            Console.WriteLine("Too low!");
-            Console.WriteLine("Try again!");
-        }
-        else if (userGuess > magicNumber)
-        {
-            Console.WriteLine("Too high!");
-            Console.WriteLine("Try again!");
-        }
-        else
-        {
-            Console.WriteLine("Congratulations! You guessed the magic number!");
-        }
+            while (userGuess < magicNumber)
+            {
+                Console.WriteLine("Too low! Try again: ");
+                input = Console.ReadLine();
+                userGuess = int.Parse(input);
+            }
+            while (userGuess > magicNumber)
+            {
+                Console.WriteLine("Too high! Try again: ");
+                input = Console.ReadLine();
+                userGuess = int.Parse(input);
+            }
+            if (userGuess == magicNumber)
+            {
+                Console.WriteLine("Congratulations! You guessed the correct number!");
+            }
+        } while (userGuess != magicNumber);
     }
 }
