@@ -1,3 +1,4 @@
+//I added the ability the quit menu that allows you to start over or end the program. but also the reveal all words function, which allows the user to start over without quiting or going through the entire hiding process and getting a different scripture. 
 using System;
 class Program
 {
