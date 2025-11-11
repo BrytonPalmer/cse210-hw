@@ -1,3 +1,4 @@
+//I added the search function by date and keyword, undo last entry, and delete entry features. options 5, 6, 7, and 8 in the menu.
 using System;
 using System.Collections.Generic;
 using System.IO;
