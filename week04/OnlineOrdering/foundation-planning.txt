@@ -1,0 +1,95 @@
+This is the planning document for the Foundation programs
+
+YouTube video program
+
+Classes:
+
+    Constructor:
+        Video(string title, string author, float length, List<Comment> comments)
+
+            Properties:
+                string title
+                string author
+                float length
+                list<Comment> comments
+
+
+            methods:
+                getTitle(): string
+                getAuthor(): string
+                getLength(): float
+                addComment(Comment comment): void
+                getComments(): List<Comment>
+
+    Constructor:
+        Comment(string name, string text)
+
+            Properties:
+                string name
+                string text
+                List<Comment> replies
+
+            methods:
+                getName(): string
+                getText(): string
+                addReply(Comment comment): void
+                getReplies(): List<Comment>();
+
+
+
+
+
+Online Ordering program
+
+Classes:
+
+    Constructor:
+        Order(Customer customer, List<Product> products)
+
+            Properties:
+                Customer customer
+                List<Product> products
+
+            methods:
+                getCustomerName();
+                addProduct(Product product): void
+                getProducts(): List<Product>
+
+    Constructor:
+        Product(string productName, float price, int quantity)
+
+            Properties:
+                string productName
+                float productPrice
+                int quantity
+
+            methods:
+                getProductName(): string
+                getProductPrice(): float
+                getProductQuantity(): int
+
+    Constructor:
+        Customer(string name, Address address)
+
+            Properties:
+                string customerName
+                Address address
+
+            methods:
+                getCustomerName(): string
+                getCustomerAddress(): Address
+
+    Constructor:
+        Address(string streetAddress, string city, string stateProvince, string country)
+
+            Properties:
+                string streetAddress
+                string city
+                string stateProvince
+                string country
+
+            methods:
+                getStreetAddress(): string
+                getCity(): string
+                getStateProvince(): string
+                getCountry(): string
