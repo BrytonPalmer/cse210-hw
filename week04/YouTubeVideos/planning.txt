@@ -1,0 +1,34 @@
+YouTube video program
+
+Classes:
+
+    Constructor:
+        Video(string title, string author, float length, List<Comment> comments)
+
+            Properties:
+                string title
+                string author
+                float length
+                list<Comment> comments
+
+
+            methods:
+                getTitle(): string
+                getAuthor(): string
+                getLength(): float
+                addComment(Comment comment): void
+                getComments(): List<Comment>
+
+    Constructor:
+        Comment(string name, string text)
+
+            Properties:
+                string name
+                string text
+                List<Comment> replies
+
+            methods:
+                getName(): string
+                getText(): string
+                addReply(Comment comment): void
+                getReplies(): List<Comment>();
