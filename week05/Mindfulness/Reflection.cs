@@ -20,66 +20,6 @@
 //  shows RandomQuestion until selected time has been reached
 
 // finishing message from Activity class
-// using System;
-// using System.Collections.Generic;
-// using System.Threading;
-// using System.ComponentModel;
-// using System.Runtime.CompilerServices;
-
-// public class Reflection : Activity
-// {
-//     private List<string> questions;
-//     private List<string> prompts;
-//     private Random _random = new Random();
-
-//     public Reflection(List<string> questions, List<string> prompts, int duration)
-//         :base("Reflecting","This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life", duration)
-//     {
-//         this.prompts = prompts;
-//         this.questions = questions;
-//     }
-
-//     public void Run()
-//     {
-//         DisplayStartingMessage();
-
-//         DisplayPrompt();
-
-//         Console.WriteLine("Press enter When you are ready...");
-//         Console.ReadLine();
-
-//         DateTime endTime = DateTime.Now.AddSeconds(_duration);
-
-//         while (DateTime.Now < endTime)
-//         {
-//             string question = GetRandomQuestion();
-//             Console.WriteLine($"- {question}");
-
-//             ShowSpinner(7);
-//         }
-
-//         DisplayEndingMessage();
-//     }
-
-//     public string GetRandomPrompt()
-//     {
-//         int i = _random.Next(prompts.Count);
-//         return prompts[i];
-//     }
-
-//     public string GetRandomQuestion()
-//     {
-//         int i = _random.Next(questions.Count);
-//         return questions[i];
-//     }
-
-//     public void DisplayPrompt()
-//     {
-//         string prompt = GetRandomPrompt();
-//         Console.WriteLine($"Prompt: {prompt}");   
-//     }
-
-// }
 
 using System;
 using System.Collections.Generic;

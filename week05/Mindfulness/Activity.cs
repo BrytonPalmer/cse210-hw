@@ -1,72 +1,18 @@
-// // this class will be the base for all other derived classes. prompts/duration/menus/finishing message
-// using System;
-// using System.Threading;
-// public class Activity
-// {
-//     protected string _name = "";
-//     protected string _description = "";
-//     protected int _duration = 50;
 
-//     public Activity(string aName, string aDescription, int aDuration)
-//     {
-//         _name = aName;
-//         _description = aDescription;
-//         _duration = aDuration;
-//     }
-//     public void DisplayStartingMessage()
-//     {
-//         Console.WriteLine($"Welcome to the {_name}...");
-//         Console.WriteLine(_description);
-//         Console.WriteLine($"This will last for {_duration} seconds.");
-//         Console.WriteLine("Get Ready!");
-//     }
-
-//     public void DisplayEndingMessage()
-//     {
-//         Console.WriteLine($"Great job with the {_name} activity!");
-//         Console.WriteLine("Take a moment to reflect on what you learned.");
-//     }
-
-//     public void ShowSpinner(int seconds)
-//     {
-//         string[] spinner = {"|", "/", "-", "\\", "|", "/", "-", "\\",};
-//         DateTime endTime = DateTime.Now.AddSeconds(seconds);
-//         int i = 0;
-
-//         while (DateTime.Now < endTime)
-//         {
-//             Console.Write(spinner[i]);
-//             Thread.Sleep(200);
-//             Console.Write("\b");
-//             i = (i + 1) % spinner.Length;
-//         }
-//     }
-
-//     public void ShowCountDown(int seconds)
-//     {
-//         for (int i = seconds; i > 0; i--)
-//         {
-//             Console.WriteLine(i);
-//             Thread.Sleep(1000);
-//         }
-//         Console.WriteLine("Go!");
-//     }
-// }
 using System;
 using System.Threading;
 
 public class Activity
 {
-    // Encapsulated shared state
     protected string _name;
     protected string _description;
-    protected int _duration; // seconds for current run
+    protected int _duration;
 
     public Activity(string name, string description)
     {
         _name = name;
         _description = description;
-        _duration = 0; // set at runtime per activity
+        _duration = 0;
     }
 
     // Standard starting message: name, description, prompt duration, prepare pause
@@ -106,7 +52,7 @@ public class Activity
         while (DateTime.Now < end)
         {
             Console.Write(frames[i]);
-            Thread.Sleep(150);
+            Thread.Sleep(1000);
             Console.Write("\b");
             i = (i + 1) % frames.Length;
         }
