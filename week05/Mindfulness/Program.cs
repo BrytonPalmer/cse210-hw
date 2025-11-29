@@ -1,9 +1,9 @@
-
-
+// I added a method to save your sessions and it gives you a count of how many you have completed.
 using System;
 
 class Program
 {
+    static int completedActivities = 0;
     static void Main(string[] args)
     {
         while (true)
@@ -13,7 +13,8 @@ class Program
             Console.WriteLine("1. Breathing");
             Console.WriteLine("2. Reflection");
             Console.WriteLine("3. Listing");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("4. Save Session");
+            Console.WriteLine("5. Quit");
             Console.Write("Choose an activity (1-4): ");
 
             string? choice = Console.ReadLine();
@@ -34,6 +35,10 @@ class Program
                     break;
 
                 case "4":
+                    SaveProgress();
+                    break;
+
+                case "5":
                     Console.WriteLine("Goodbye!");
                     return;
 
@@ -46,5 +51,11 @@ class Program
             Console.ReadLine();
             Console.Clear();
         }
+    }
+    static void SaveProgress()
+    {
+        string filePath = "progress.txt";
+        File.WriteAllText(filePath, $"Completed activities: {completedActivities}");
+        Console.WriteLine($"Progress saved to {filePath}");
     }
 }
