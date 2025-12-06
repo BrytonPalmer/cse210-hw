@@ -1,3 +1,4 @@
+// for creativity, in the GoalManager, we added a feature to track player levels based on points earned.
 using System;
 
 class Program
